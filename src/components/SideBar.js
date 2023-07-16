@@ -6,43 +6,43 @@ import EmailIcon from '@mui/icons-material/Email';
 
 const SideBar = () => (
   <div className="sidebar">
-    <nav>
-      <span>RE</span>
-      <ul>
+    <nav className="navbar">
+      <span className="logo">RE/ROOM</span>
+      <ul className="navbar-ul">
         <li>
-          <NavLink to="/">
+          <NavLink to="/" className={({ isActive }) => (isActive ? 'active-link' : 'nav-link')}>
             Rooms
           </NavLink>
         </li>
         <li>
-          <NavLink to="/add-reservation">
+          <NavLink to="/add-reservation" className={({ isActive }) => (isActive ? 'active-link' : 'nav-link')}>
             Make a reservation
           </NavLink>
         </li>
         <li>
-          <NavLink to="/my-reservations">
+          <NavLink to="/my-reservations" className={({ isActive }) => (isActive ? 'active-link' : 'nav-link')}>
             My reservations
           </NavLink>
         </li>
         <li>
-          <NavLink to="/my-rooms">
+          <NavLink to="/my-rooms" className={({ isActive }) => (isActive ? 'active-link' : 'nav-link')}>
             My rooms
           </NavLink>
         </li>
         <li>
-          <NavLink to="/add-room">
+          <NavLink to="/add-room" className={({ isActive }) => (isActive ? 'active-link' : 'nav-link')}>
             Post a room
           </NavLink>
         </li>
       </ul>
     </nav>
-    <div>
-      <ul>
-        <li><Link to="https://github.com/zdnahom"><GitHubIcon /></Link></li>
-        <li><Link to="https://twitter.com/Mov_abd"><TwitterIcon /></Link></li>
-        <li><Link to="https://linkedin.com/in/nicholas-amissah-153b09154"><EmailIcon /></Link></li>
+    <div className="footer">
+      <ul className="icons-ul">
+        <li><Link to="https://github.com/zdnahom"><GitHubIcon className="icon" style={{ fontSize: 20 }} /></Link></li>
+        <li><Link to="https://twitter.com/Mov_abd"><TwitterIcon className="icon" style={{ fontSize: 20 }} /></Link></li>
+        <li><Link to="https://linkedin.com/in/nicholas-amissah-153b09154"><EmailIcon className="icon" style={{ fontSize: 20 }} /></Link></li>
       </ul>
-      <span>©2023 FINAL CAPSTONE</span>
+      <span className="footer-span">©2023 FINAL CAPSTONE</span>
     </div>
   </div>
 );
