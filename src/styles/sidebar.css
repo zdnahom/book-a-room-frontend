@@ -8,23 +8,28 @@
   z-index: 1;
   background-color: white;
 }
+
 .no-sidebar {
   height: 10vh;
 }
+
 .hidden {
   display: none;
 }
+
 .navbar {
   display: flex;
   flex-direction: column;
   gap: 100px;
 }
+
 .logo-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 2%;
 }
+
 .logo {
   color: #565656;
   font-size: 2rem;
@@ -32,10 +37,12 @@
   width: 100%;
   text-align: center;
 }
+
 .button {
   background-color: inherit;
   border: none;
 }
+
 .navbar-ul {
   display: flex;
   flex-direction: column;
@@ -92,8 +99,8 @@
     height: 100vh;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
   }
+
   .navbar {
     padding-top: 30px;
   }
-  
 }
