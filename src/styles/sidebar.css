@@ -2,26 +2,40 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 20%;
+  position: fixed;
+  width: 100%;
   height: 100vh;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  background-color: white;
 }
-
+.no-sidebar {
+  height: 10vh;
+}
+.hidden {
+  display: none;
+}
 .navbar {
   display: flex;
   flex-direction: column;
   gap: 100px;
-  padding-top: 30px;
 }
-
+.logo-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2%;
+}
 .logo {
   color: #565656;
   font-size: 2rem;
-  rotate: -7deg;
-  text-align: center;
   font-weight: 900;
+  width: 100%;
+  text-align: center;
 }
-
+.button {
+  background-color: inherit;
+  border: none;
+}
 .navbar-ul {
   display: flex;
   flex-direction: column;
@@ -69,4 +83,17 @@
 .footer-span {
   text-align: center;
   font-size: 0.6rem;
+}
+
+@media screen and (min-width: 768px) {
+  .sidebar {
+    position: static;
+    width: 250px;
+    height: 100vh;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  }
+  .navbar {
+    padding-top: 30px;
+  }
+  
 }
