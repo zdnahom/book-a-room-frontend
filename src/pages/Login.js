@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 // import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 // import '@fortawesome/fontawesome-free/css/all.min.css';
 
@@ -74,10 +75,9 @@ const Login = () => {
                       </a>
                       <p className="mb-5 pb-lg-2" style={{ color: '#393f81' }}>
                         Don&apos;t have an account?
-                        {' '}
-                        <a href="#!" style={{ color: '#393f81' }}>
+                        <Link to="/signup" style={{ color: '#393f81' }}>
                           Register here
-                        </a>
+                        </Link>
                       </p>
                       <a href="#!" className="small text-muted">
                         Terms of use.
