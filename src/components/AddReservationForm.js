@@ -1,7 +1,3 @@
-const AddReservationForm = () => (
-  <div>
-    Reservation Form
-  </div>
-);
+const AddReservationForm = () => <div>Reservation Form</div>;
 
 export default AddReservationForm;
