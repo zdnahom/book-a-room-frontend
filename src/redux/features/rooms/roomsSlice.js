@@ -10,7 +10,7 @@ export const getRooms = createAsyncThunk('rooms/getRooms', async (_, thunkAPI) =
   }
 });
 const initialState = {
-  rooms: {},
+  rooms: [],
   isLoading: false,
   error: null,
 };
