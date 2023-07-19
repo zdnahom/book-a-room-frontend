@@ -24,8 +24,9 @@
 <!-- PROJECT DESCRIPTION -->
 
 # 📖 Book-a-room App <a name="about-project"></a>
+
 > A responsive app which lets users book their favorite room a night with good price
-> 
+>
 > This is the backend => [API](https://github.com/Mov305/book_a_room_backend.git)
 
 ## 🛠 Built With <a name="built-with"></a>
@@ -53,62 +54,56 @@
   </ul>
 </details>
 
-
-
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
 
 - **Empty react app**
 
-
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 ## 💻 Getting Started <a name="getting-started"></a>
-
 
 ### Prerequisites
 
 In order to run this project you need: Configure your code editor with HTML , CSS & JS and some other important extensions
 
-
-
 ### Setup
-``````
-git clone git@github.com:zdnahom/book-a-room-frontend.git
-``````
 
+```
+git clone git@github.com:zdnahom/book-a-room-frontend.git
+```
 
 ### Install
 
-Install this project with: 
-  ``````
-  git clone git@github.com:zdnahom/book-a-room-frontend.git
-``````
+Install this project with:
+
+```
+git clone git@github.com:zdnahom/book-a-room-frontend.git
+```
+
 ### Usage
 
 To run the project, execute the following command:
-``````
+
+```
   cd book-a-room-frontend
 
   npm install
 
   npm start
-``````
+```
 
 ### Run tests
 
 - Not available for now
-
 
 <!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
 
 👤 **Nahom Zerihun Demissie 💻**
+
 - GitHub: [@zdnahom](https://github.com/zdnahom)
 - Twitter: [@zdnahom](https://twitter.com/Nahomzerihun11)
 - LinkedIn: [@zdnahom](https://www.linkedin.com/in/nahomzerihun76/)
@@ -130,11 +125,12 @@ To run the project, execute the following command:
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
--  **Signup page**
--  **Login page**
--  **Main page**
--  **Reservation page**
--  **Detail page**
+
+- **Signup page**
+- **Login page**
+- **Main page**
+- **Reservation page**
+- **Detail page**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -159,7 +155,8 @@ If you like this project, please clone it and try it. I know you're going to lov
 <!-- ACKNOWLEDGEMENTS -->
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
- We would like to thank [Murat Korkmaz](https://www.behance.net/muratk) for the amazing [design](https://www.behance.net/gallery/26425031/Vespa-Responsive-Redesign), and we'd also want to thank Microverse(staffs , mentors , reviewers) for giving us the knowledge to build an amazing project like this.
+
+We would like to thank [Murat Korkmaz](https://www.behance.net/muratk) for the amazing [design](https://www.behance.net/gallery/26425031/Vespa-Responsive-Redesign), and we'd also want to thank Microverse(staffs , mentors , reviewers) for giving us the knowledge to build an amazing project like this.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -172,7 +169,7 @@ If you like this project, please clone it and try it. I know you're going to lov
   Of course you can! First fork it and contribute to it.
 
 - **How should I ask a pull request**
-  
+
   - Step 1 : Click on the pull request button
   - Step 2 : create pull request
 

@@ -18,16 +18,38 @@
     "plugin:react-hooks/recommended"
   ],
   "plugins": [
-    "react"
+    "react",
+    "import",
+    "jsx-a11y",
+    "react-hooks"
   ],
   "rules": {
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          "**/*.test.js",
+          "**/*.spec.js",
+          "src/setupTests.js"
+        ]
+      }
+    ],
+    "jsx-a11y/label-has-associated-control": [
+      "error",
+      {
+        "required": {
+          "some": [
+            "nesting",
+            "id"
+          ]
+        }
+      }
+    ],
+    "react/no-unescaped-entities": "off",
     "react/jsx-filename-extension": [
       "warn",
       {
-        "extensions": [
-          ".js",
-          ".jsx"
-        ]
+        "extensions": [".js", ".jsx"]
       }
     ],
     "react/react-in-jsx-scope": "off",
@@ -36,10 +58,7 @@
   },
   "overrides": [
     {
-      "files": [
-        "src/**/*Slice.js"
-      ],
-      // avoid state param assignment
+      "files": ["src/**/*Slice.js"],
       "rules": {
         "no-param-reassign": [
           "error",
@@ -50,8 +69,5 @@
       }
     }
   ],
-  "ignorePatterns": [
-    "dist/",
-    "build/"
-  ]
+  "ignorePatterns": ["dist/", "build/"]
 }
