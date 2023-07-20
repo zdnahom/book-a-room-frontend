@@ -6,6 +6,7 @@ import AddRoomForm from './components/AddRoomForm';
 import AddReservationForm from './components/AddReservationForm';
 import MyReservations from './components/MyReservations';
 import MyRooms from './components/MyRooms';
+import RoomDetail from './components/RoomDetail';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <SideBar />
         <Routes>
           <Route path="/" element={<Rooms />} />
+          <Route path="/rooms/:roomId" element={<RoomDetail />} />
           <Route path="/add-reservation" element={<AddReservationForm />} />
           <Route path="/my-reservations" element={<MyReservations />} />
           <Route path="/my-rooms" element={<MyRooms />} />

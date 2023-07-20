@@ -1,6 +1,5 @@
 
 .rooms-container {
-  /* background-color: red; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,10 +28,13 @@
   width: 94%;
   padding: 20px;
 }
-
+.custom-link {
+  text-decoration: none;
+}
 .room {
   background-color: white;
   padding: 2%;
+  color: black;
 }
 
 .room-img {
