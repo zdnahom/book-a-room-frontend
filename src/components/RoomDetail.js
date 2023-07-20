@@ -12,8 +12,7 @@ const RoomDetail = () => {
   const { roomId } = useParams();
   useEffect(() => {
     dispatch(getSingleRoom(roomId));
-  }, [dispatch]);
-  console.log(singleRoom);
+  }, [dispatch,roomId]);
   return (
     <>
       {
