@@ -8,7 +8,6 @@ const SignUp = () => {
   const handleSignUp = (e) => {
     e.preventDefault();
     // Perform sign-up logic here
-    console.log('Sign up:', email, password);
     // Reset form
     setEmail('');
     setPassword('');

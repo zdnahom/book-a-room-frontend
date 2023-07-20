@@ -9,7 +9,6 @@ const Login = () => {
   const handleLogin = (e) => {
     e.preventDefault();
     // Perform login logic here
-    console.log('Login:', email, password);
     // Reset form
     setEmail('');
     setPassword('');

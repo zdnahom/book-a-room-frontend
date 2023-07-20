@@ -13,6 +13,7 @@ const RoomDetail = () => {
   useEffect(() => {
     dispatch(getSingleRoom(roomId));
   }, [dispatch,roomId]);
+  
   return (
     <>
       {
