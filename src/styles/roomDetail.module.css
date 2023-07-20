@@ -1,100 +1,118 @@
 
 .detail-container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
+
 .left-detail {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .image-container {
-    display: flex;
-    padding: 5%;
+  display: flex;
+  padding: 5%;
 }
+
 .room-image {
-    width: 100%;
-    height: auto;
-} 
+  width: 100%;
+  height: auto;
+}
+
 .back-button {
-    background-color:#97bf0f;
-    display: flex;
-    width: 40px;
-    justify-content: end;
-    align-items: center;
-    padding: 15px;
-    border-top-right-radius: 40%;
-    border-bottom-right-radius: 40%;
+  background-color: #97bf0f;
+  display: flex;
+  width: 40px;
+  justify-content: end;
+  align-items: center;
+  padding: 15px;
+  border-top-right-radius: 40%;
+  border-bottom-right-radius: 40%;
 }
+
 .back {
-    rotate: -90deg;
-    color: white;
+  rotate: -90deg;
+  color: white;
 }
+
 .right-detail {
-    padding: 2%;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
-.right-detail p:nth-child(even){
-    background-color: #e2e3e5;
+
+.right-detail p:nth-child(even) {
+  background-color: #e2e3e5;
 }
+
 .room-description {
-    padding: 4%;
-    text-align: end;
-    font-weight: 700;
-    font-size: 1.4rem;
+  padding: 4%;
+  text-align: end;
+  font-weight: 700;
+  font-size: 1.4rem;
 }
-.room-type, .price-container, .room-status {
-    display: flex;
-    justify-content: space-between; 
-    padding: 4%;
+
+.room-type,
+.price-container,
+.room-status {
+  display: flex;
+  justify-content: space-between;
+  padding: 4%;
 }
+
 .price-container span {
-    color: gray;
+  color: gray;
 }
-.reserve-button-container{
-    display: flex;
-    align-self: center;
-    align-items: center;
-    height: 50px;
-    text-decoration: none;
-    margin-top: 50px;
+
+.reserve-button-container {
+  display: flex;
+  align-self: center;
+  align-items: center;
+  height: 50px;
+  text-decoration: none;
+  margin-top: 50px;
 }
+
 .reserve-button {
-    background-color: #97bf0f;
-    display:flex;
-    align-items: center;
-    height: 50px;
-    color:white;
+  background-color: #97bf0f;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  color: white;
 }
-.left-round,.right-round{
-    background-color:#97bf0f;
-    width: 50px;
-    height: 50px;
+
+.left-round,
+.right-round {
+  background-color: #97bf0f;
+  width: 50px;
+  height: 50px;
 }
-.left-round{
-    border-top-left-radius: 50%;
-    border-bottom-left-radius: 50%;
+
+.left-round {
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
 }
-.right-round{
-    border-top-right-radius: 50%;
-    border-bottom-right-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
+
+.right-round {
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
 }
+
 @media screen and (min-width: 768px) {
-    .detail-container {
-        width: 75%;
-        flex-direction: row;
-    }
-    .left-detail {
-        width: 70%;
-        height: 100vh;
-        gap: 50px;
-    }
-   
+  .detail-container {
+    width: 75%;
+    flex-direction: row;
+  }
+
+  .left-detail {
+    width: 70%;
+    height: 100vh;
+    gap: 50px;
+  }
 }
