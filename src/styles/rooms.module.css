@@ -1,6 +1,5 @@
 
 .rooms-container {
-  /* background-color: red; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,17 +21,21 @@
 .rooms {
   width: 100%;
   display: flex;
-  justify-content: center;
 }
 
 .my-carousel {
   width: 94%;
-  padding: 20px;
+  padding: 30px;
+}
+
+.custom-link {
+  text-decoration: none;
 }
 
 .room {
   background-color: white;
   padding: 2%;
+  color: black;
 }
 
 .room-img {

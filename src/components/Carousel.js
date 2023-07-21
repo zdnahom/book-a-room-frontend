@@ -2,6 +2,8 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
+import styles from '../styles/rooms.module.css';
 
 function RightArrow(props) {
   const { className, style, onClick } = props;
@@ -14,8 +16,9 @@ function RightArrow(props) {
         backgroundColor: '#97bf0f',
         color: 'white',
         height: '50px',
-        paddingRight: '25px',
+        width: '50px',
         alignItems: 'center',
+        paddingLeft: '10px',
         borderTopRightRadius: 0,
         borderBottomRightRadius: 0,
         borderTopLeftRadius: '50%',
@@ -40,8 +43,9 @@ function LeftArrow(props) {
         backgroundColor: '#97bf0f',
         color: 'white',
         height: '50px',
-        paddingLeft: '25px',
+        width: '50px',
         alignItems: 'center',
+        paddingLeft: '20px',
         borderTopRightRadius: '50%',
         borderBottomRightRadius: '50%',
         borderTopLeftRadius: 0,
@@ -58,7 +62,7 @@ function LeftArrow(props) {
 
 function Carousel({ rooms }) {
   const settings = {
-    className: 'my-carousel',
+    className: styles['my-carousel'],
     dots: true,
     infinite: true,
     speed: 500,
@@ -85,9 +89,9 @@ function Carousel({ rooms }) {
   };
 
   return (
-    <ul className="rooms">
+    <ul className={styles.rooms}>
       <Slider
-        className="my-carousel"
+        className={settings.className}
         dots={settings.dots}
         infinite={settings.infinite}
         speed={settings.speed}
@@ -100,19 +104,21 @@ function Carousel({ rooms }) {
         responsive={settings.responsive}
       >
         {rooms.map((room) => (
-          <li className="room" key={room.id}>
-            <img
-              className="room-img"
-              src={room.image}
-              alt="room pic"
-            />
-            <p className="room-description">{room.description}</p>
-            <p className="room-price">
-              $
-              {room.night_cost}
-              <span>/night</span>
-            </p>
-          </li>
+          <Link key={room.id} to={`/rooms/${room.id}`} className={styles['custom-link']}>
+            <li className={styles.room}>
+              <img
+                className={styles['room-img']}
+                src={room.image}
+                alt="room pic"
+              />
+              <p className={styles['room-description']}>{room.description}</p>
+              <p className={styles['room-price']}>
+                $
+                {room.night_cost}
+                <span>/night</span>
+              </p>
+            </li>
+          </Link>
         ))}
       </Slider>
     </ul>
