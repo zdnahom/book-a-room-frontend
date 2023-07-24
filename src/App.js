@@ -22,7 +22,7 @@ function App() {
           <Route path="/my-reservations" element={<Protected><MyReservations /></Protected>} />
           <Route path="/my-rooms" element={<Protected><MyRooms /></Protected>} />
           <Route path="/add-room" element={<Protected><AddRoomForm /></Protected>} />
-          <Route path="/rooms/:roomId" element={<RoomDetail />} />
+          <Route path="/rooms/:roomId" element={<Protected><RoomDetail /></Protected>} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/login" element={<Login />} />
         </Routes>
