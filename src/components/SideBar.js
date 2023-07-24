@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
+import '../styles/sidebar.css';
 import { NavLink, Link } from 'react-router-dom';
-
 import GitHubIcon from '@mui/icons-material/GitHub';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import EmailIcon from '@mui/icons-material/Email';
@@ -33,6 +33,7 @@ const SideBar = () => {
   };
 
   return (
+
     <div className={isMobile && !menuOpened ? styles['no-sidebar'] : styles.sidebar}>
       <nav className={styles.navbar}>
         <div className={styles['logo-container']}>
@@ -86,11 +87,18 @@ const SideBar = () => {
           </li>
         </ul>
       </nav>
-      <div className={isMobile && !menuOpened ? styles.hidden : styles.footer}>
-        <ul className={styles['icons-ul']}>
-          <li><Link to="https://github.com/zdnahom"><GitHubIcon className={styles.icon} style={{ fontSize: 20 }} /></Link></li>
-          <li><Link to="https://twitter.com/Mov_abd"><TwitterIcon className={styles.icon} style={{ fontSize: 20 }} /></Link></li>
-          <li><Link to="https://linkedin.com/in/nicholas-amissah-153b09154"><EmailIcon className={styles.icon} style={{ fontSize: 20 }} /></Link></li>
+      <div className={isMobile && !menuOpened ? 'hidden' : 'footer'}>
+        <ul className="icons-ul">
+          <li>
+            <GitHubIcon className="icon" style={{ fontSize: 20 }} />
+          </li>
+          <li>
+            <TwitterIcon className="icon" style={{ fontSize: 20 }} />
+          </li>
+          <li>
+            <EmailIcon className="icon" style={{ fontSize: 20 }} />
+          </li>
+
         </ul>
         <span className={styles['footer-span']}>©2023 FINAL CAPSTONE</span>
       </div>
