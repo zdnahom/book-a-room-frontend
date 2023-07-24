@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
 import '../styles/sidebar.css';
+import { NavLink, Link } from 'react-router-dom';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import EmailIcon from '@mui/icons-material/Email';
 import DragHandleIcon from '@mui/icons-material/DragHandle';
 import CloseIcon from '@mui/icons-material/Close';
+import styles from '../styles/sidebar.module.css';
 
 const SideBar = () => {
   const [menuOpened, setMenuOpened] = useState(false);
@@ -32,74 +33,55 @@ const SideBar = () => {
   };
 
   return (
-    <div className={isMobile && !menuOpened ? 'no-sidebar' : 'sidebar'}>
-      <nav className="navbar">
-        <div className="logo-container">
-          <span className={isMobile && !menuOpened ? 'hidden' : 'logo'}>RE/ROOM</span>
-          {isMobile && (
+
+    <div className={isMobile && !menuOpened ? styles['no-sidebar'] : styles.sidebar}>
+      <nav className={styles.navbar}>
+        <div className={styles['logo-container']}>
+          <span className={isMobile && !menuOpened ? styles.hidden : styles.logo}>RE/ROOM</span>
+          { isMobile && (
             <>
               <button
                 type="button"
-                className={!menuOpened ? 'button' : 'hidden'}
+                className={!menuOpened ? styles.button : styles.hidden}
                 onClick={openMenu}
                 aria-label="Open Menu"
               >
-                <DragHandleIcon className="icon" style={{ fontSize: 40 }} />
+                <DragHandleIcon className={styles.icon} style={{ fontSize: 40 }} />
               </button>
               <button
                 type="button"
-                className={menuOpened ? 'button' : 'hidden'}
+                className={menuOpened ? styles.button : styles.hidden}
                 onClick={closeMenu}
                 aria-label="Close Menu"
               >
-                <CloseIcon className="icon" style={{ fontSize: 40 }} />
+                <CloseIcon className={styles.icon} style={{ fontSize: 40 }} />
               </button>
             </>
           )}
         </div>
-        <ul className={isMobile && !menuOpened ? 'hidden' : 'navbar-ul'}>
+        <ul className={isMobile && !menuOpened ? styles.hidden : styles['navbar-ul']}>
           <li>
-            <NavLink
-              to="/"
-              className={({ isActive }) => (isActive ? 'active-link' : 'nav-link')}
-              onClick={closeMenu}
-            >
+            <NavLink to="/" className={({ isActive }) => (isActive ? styles['active-link'] : styles['nav-link'])} onClick={closeMenu}>
               Rooms
             </NavLink>
           </li>
           <li>
-            <NavLink
-              to="/add-reservation"
-              className={({ isActive }) => (isActive ? 'active-link' : 'nav-link')}
-              onClick={closeMenu}
-            >
+            <NavLink to="/add-reservation" className={({ isActive }) => (isActive ? styles['active-link'] : styles['nav-link'])} onClick={closeMenu}>
               Make a reservation
             </NavLink>
           </li>
           <li>
-            <NavLink
-              to="/my-reservations"
-              className={({ isActive }) => (isActive ? 'active-link' : 'nav-link')}
-              onClick={closeMenu}
-            >
+            <NavLink to="/my-reservations" className={({ isActive }) => (isActive ? styles['active-link'] : styles['nav-link'])} onClick={closeMenu}>
               My reservations
             </NavLink>
           </li>
           <li>
-            <NavLink
-              to="/my-rooms"
-              className={({ isActive }) => (isActive ? 'active-link' : 'nav-link')}
-              onClick={closeMenu}
-            >
+            <NavLink to="/my-rooms" className={({ isActive }) => (isActive ? styles['active-link'] : styles['nav-link'])} onClick={closeMenu}>
               My rooms
             </NavLink>
           </li>
           <li>
-            <NavLink
-              to="/add-room"
-              className={({ isActive }) => (isActive ? 'active-link' : 'nav-link')}
-              onClick={closeMenu}
-            >
+            <NavLink to="/add-room" className={({ isActive }) => (isActive ? styles['active-link'] : styles['nav-link'])} onClick={closeMenu}>
               Post a room
             </NavLink>
           </li>
@@ -116,8 +98,9 @@ const SideBar = () => {
           <li>
             <EmailIcon className="icon" style={{ fontSize: 20 }} />
           </li>
+
         </ul>
-        <span className="footer-span">©2023 FINAL CAPSTONE</span>
+        <span className={styles['footer-span']}>©2023 FINAL CAPSTONE</span>
       </div>
     </div>
   );

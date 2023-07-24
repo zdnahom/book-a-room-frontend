@@ -19,6 +19,7 @@ const SignUp = () => {
     }
     e.preventDefault();
     dispatch(signUp({ email, password }));
+
   };
 
   useEffect(() => {
