@@ -4,19 +4,19 @@ import { useEffect } from 'react';
 import ChangeHistorySharpIcon from '@mui/icons-material/ChangeHistorySharp';
 import ChevronRightRoundedIcon from '@mui/icons-material/ChevronRightRounded';
 import styles from '../styles/roomDetail.module.css';
-import { getSingleRoom } from '../redux/features/single_room/singleRoomSlice';
+import { getSingleRoom } from '../redux/reducers/room';
 
 const RoomDetail = () => {
-  const { singleRoom, isLoading } = useSelector((store) => store.singleRoom);
+  const { singleRoom, loading } = useSelector((store) => store.rooms);
   const dispatch = useDispatch();
   const { roomId } = useParams();
   useEffect(() => {
     dispatch(getSingleRoom(roomId));
-  }, [dispatch,roomId]);
+  }, [dispatch, roomId]);
   return (
     <>
       {
-      isLoading ? (
+      loading ? (
         <p>loading...</p>) : (
           <div className={styles['detail-container']}>
             <div className={styles['left-detail']}>
