@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
-import { NavLink, Link } from 'react-router-dom';
-
+import { NavLink } from 'react-router-dom';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import EmailIcon from '@mui/icons-material/Email';
@@ -37,7 +36,7 @@ const SideBar = () => {
       <nav className={styles.navbar}>
         <div className={styles['logo-container']}>
           <span className={isMobile && !menuOpened ? styles.hidden : styles.logo}>RE/ROOM</span>
-          { isMobile && (
+          {isMobile && (
             <>
               <button
                 type="button"
@@ -60,37 +59,63 @@ const SideBar = () => {
         </div>
         <ul className={isMobile && !menuOpened ? styles.hidden : styles['navbar-ul']}>
           <li>
-            <NavLink to="/" className={({ isActive }) => (isActive ? styles['active-link'] : styles['nav-link'])} onClick={closeMenu}>
+            <NavLink
+              to="/"
+              className={({ isActive }) => (isActive ? styles['active-link'] : styles['nav-link'])}
+              onClick={closeMenu}
+            >
               Rooms
             </NavLink>
           </li>
           <li>
-            <NavLink to="/add-reservation" className={({ isActive }) => (isActive ? styles['active-link'] : styles['nav-link'])} onClick={closeMenu}>
+            <NavLink
+              to="/add-reservation"
+              className={({ isActive }) => (isActive ? styles['active-link'] : styles['nav-link'])}
+              onClick={closeMenu}
+            >
               Make a reservation
             </NavLink>
           </li>
           <li>
-            <NavLink to="/my-reservations" className={({ isActive }) => (isActive ? styles['active-link'] : styles['nav-link'])} onClick={closeMenu}>
+            <NavLink
+              to="/my-reservations"
+              className={({ isActive }) => (isActive ? styles['active-link'] : styles['nav-link'])}
+              onClick={closeMenu}
+            >
               My reservations
             </NavLink>
           </li>
           <li>
-            <NavLink to="/my-rooms" className={({ isActive }) => (isActive ? styles['active-link'] : styles['nav-link'])} onClick={closeMenu}>
+            <NavLink
+              to="/my-rooms"
+              className={({ isActive }) => (isActive ? styles['active-link'] : styles['nav-link'])}
+              onClick={closeMenu}
+            >
               My rooms
             </NavLink>
           </li>
           <li>
-            <NavLink to="/add-room" className={({ isActive }) => (isActive ? styles['active-link'] : styles['nav-link'])} onClick={closeMenu}>
+            <NavLink
+              to="/add-room"
+              className={({ isActive }) => (isActive ? styles['active-link'] : styles['nav-link'])}
+              onClick={closeMenu}
+            >
               Post a room
             </NavLink>
           </li>
         </ul>
       </nav>
-      <div className={isMobile && !menuOpened ? styles.hidden : styles.footer}>
-        <ul className={styles['icons-ul']}>
-          <li><Link to="https://github.com/zdnahom"><GitHubIcon className={styles.icon} style={{ fontSize: 20 }} /></Link></li>
-          <li><Link to="https://twitter.com/Mov_abd"><TwitterIcon className={styles.icon} style={{ fontSize: 20 }} /></Link></li>
-          <li><Link to="https://linkedin.com/in/nicholas-amissah-153b09154"><EmailIcon className={styles.icon} style={{ fontSize: 20 }} /></Link></li>
+      <div className={isMobile && !menuOpened ? 'hidden' : 'footer'}>
+        <ul className="icons-ul">
+          <li>
+            <GitHubIcon className="icon" style={{ fontSize: 20 }} />
+          </li>
+          <li>
+            <TwitterIcon className="icon" style={{ fontSize: 20 }} />
+          </li>
+          <li>
+            <EmailIcon className="icon" style={{ fontSize: 20 }} />
+          </li>
         </ul>
         <span className={styles['footer-span']}>©2023 FINAL CAPSTONE</span>
       </div>

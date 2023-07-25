@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import { useEffect } from 'react';
 import ChangeHistorySharpIcon from '@mui/icons-material/ChangeHistorySharp';
 import ChevronRightRoundedIcon from '@mui/icons-material/ChevronRightRounded';
@@ -10,6 +10,7 @@ const RoomDetail = () => {
   const { singleRoom, loading } = useSelector((store) => store.rooms);
   const dispatch = useDispatch();
   const { roomId } = useParams();
+  const navigate = useNavigate();
   useEffect(() => {
     dispatch(getSingleRoom(roomId));
   }, [dispatch, roomId]);
@@ -23,7 +24,14 @@ const RoomDetail = () => {
               <div className={styles['image-container']}>
                 <img className={styles['room-image']} src={singleRoom.image} alt="room pic" />
               </div>
-              <Link className={styles['back-button']} to="/"><ChangeHistorySharpIcon className={styles.back} style={{ fontSize: 20 }} /></Link>
+              <button
+                type="button"
+                className={styles['back-button']}
+                onClick={() => navigate(-1)}
+                aria-label="Go back"
+              >
+                <ChangeHistorySharpIcon className={styles.back} style={{ fontSize: 20 }} />
+              </button>
             </div>
             <div className={styles['right-detail']}>
               <p className={styles['room-description']}>{singleRoom.description}</p>
