@@ -97,17 +97,21 @@ const AddRoomForm = () => {
             type="text"
             id="image"
             name="image"
+            value={roomData.image}
             placeholder="Enter room image URL"
             onChange={handleChange}
             accept="image/*"
             required
           />
         </div>
-        <div className={styles['button-container']}>
+        <button type="submit" className={styles['button-container']}>
           <span className={styles['left-round']} />
-          <button type="submit" className={styles.button}>ADD ROOM</button>
+          <div className />
+          <div className={styles.button}>
+            BOOK
+          </div>
           <span className={styles['right-round']} />
-        </div>
+        </button>
       </form>
     </div>
   );

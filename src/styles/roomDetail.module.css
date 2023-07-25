@@ -29,6 +29,7 @@
   padding: 15px;
   border-top-right-radius: 40%;
   border-bottom-right-radius: 40%;
+  border: none;
 }
 
 .back {
@@ -111,8 +112,12 @@
   }
 
   .left-detail {
-    width: 70%;
+    width: 60%;
     height: 100vh;
     gap: 50px;
+  }
+
+  .right-detail {
+    width: 40%;
   }
 }
