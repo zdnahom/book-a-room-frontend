@@ -21,8 +21,9 @@ export const createRoom = createAsyncThunk('room/createRoom', async (payload, th
     },
     body: JSON.stringify(payload),
   });
+  const data = await response.json();
   if (response.ok) {
-    return {id: payload}
+    return data;
   }
   return thunkAPI.rejectWithValue(data);
 });
@@ -77,7 +78,9 @@ const roomSlice = createSlice({
     [createRoom.rejected]: (state, action) => ({ ...state, error: action.payload, loading: false }),
     [deleteRoom.pending]: (state) => ({ ...state, loading: true }),
     [deleteRoom.fulfilled]: (state, action) => {
-      state.rooms = state.rooms.filter((room) => room.id !== action.id);
+      console.log(action);
+      state.rooms = state.rooms.filter((room) => room.id !== action.payload.id);
+      state.loading = false;
     },
     [deleteRoom.rejected]: (state, action) => ({ ...state, error: action.payload, loading: false }),
   },
