@@ -113,7 +113,7 @@ const AddRoomForm = () => {
         <button type="submit" className={styles['button-container']}>
           <span className={styles['left-round']} />
           <div className />
-          <div className={styles.button}>BOOK</div>
+          <div className={styles.button}>ADD</div>
           <span className={styles['right-round']} />
         </button>
       </form>
