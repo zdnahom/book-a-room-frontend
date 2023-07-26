@@ -15,10 +15,7 @@ const Rooms = () => {
     <div className={styles['rooms-container']}>
       <h2 className={styles['rooms-header']}>All AVAILABLE ROOMS</h2>
       <span className={styles['select-room-text']}>Please select your favorite room</span>
-      {
-        loading ? (
-          <p>loading...</p>) : (<Carousel rooms={rooms} />)
-      }
+      {loading ? <p>loading...</p> : <Carousel rooms={rooms} />}
     </div>
   );
 };
