@@ -5,7 +5,7 @@ import styles from '../styles/rooms.module.css';
 import Carousel from './Carousel';
 
 const Rooms = () => {
-  const { rooms, loading } = useSelector((store) => store.rooms);
+  const { rooms, loading } = useSelector((store) => store.room);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchRooms());

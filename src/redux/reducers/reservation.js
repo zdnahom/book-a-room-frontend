@@ -5,9 +5,7 @@ const URL = 'https://book-a-room.onrender.com/api/v1/reservations';
 export const fetchReservations = createAsyncThunk(
   'reservation/fetchReservations',
   async (payload, thunkAPI) => {
-    const response = await fetch(
-      `${URL}?user_id=${payload.user_id}`,
-    );
+    const response = await fetch(`${URL}?user_id=${payload}`);
     const data = await response.json();
     if (response.ok) {
       return data;
@@ -16,7 +14,7 @@ export const fetchReservations = createAsyncThunk(
   },
 );
 
-// fetchReservations is dispachec this way => dispatch(fetchReservations({user_id}))
+// fetchReservations is dispachec this way => dispatch(fetchReservations(user_id))
 
 export const createReservation = createAsyncThunk(
   'reservation/createReservation',
@@ -42,19 +40,15 @@ export const createReservation = createAsyncThunk(
 export const deleteReservation = createAsyncThunk(
   'reservation/deleteReservation',
   async (payload, thunkAPI) => {
-    const response = await fetch(
-      `${URL}/${payload.id}`,
-      {
-        method: 'DELETE',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(payload),
+    const response = await fetch(`${URL}/${payload}`, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
       },
-    );
+    });
     const data = await response.json();
     if (response.ok) {
-      return data;
+      return { id: payload, ...data };
     }
     return thunkAPI.rejectWithValue(data);
   },

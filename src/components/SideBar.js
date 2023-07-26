@@ -106,7 +106,7 @@ const SideBar = () => {
         </ul>
       </nav>
       <div className={isMobile && !menuOpened ? 'hidden' : 'footer'}>
-        <ul className="icons-ul">
+        <ul className="icons-ul flex justify-center gap-4">
           <li>
             <GitHubIcon className="icon" style={{ fontSize: 20 }} />
           </li>

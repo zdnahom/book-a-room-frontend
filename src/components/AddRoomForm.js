@@ -1,18 +1,23 @@
 import { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 import { createRoom } from '../redux/reducers/room';
 import styles from '../styles/add_room_form.module.css';
 
 const AddRoomForm = () => {
+  const { user } = useSelector((store) => store.user);
+  // const user = { id: 1 };
+
   const [roomData, setRoomData] = useState({
     description: '',
     num: '',
     room_type: '',
     night_cost: '',
     image: '',
-    user_id: 1,
+    user_id: user.user.id,
   });
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -31,8 +36,9 @@ const AddRoomForm = () => {
       room_type: '',
       night_cost: '',
       image: '',
-      user_id: 1,
+      user_id: user.user.id,
     });
+    navigate('/my-rooms');
   };
   return (
     <div className={styles['form-container']}>
@@ -107,9 +113,7 @@ const AddRoomForm = () => {
         <button type="submit" className={styles['button-container']}>
           <span className={styles['left-round']} />
           <div className />
-          <div className={styles.button}>
-            BOOK
-          </div>
+          <div className={styles.button}>BOOK</div>
           <span className={styles['right-round']} />
         </button>
       </form>
