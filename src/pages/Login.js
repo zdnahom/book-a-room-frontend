@@ -41,7 +41,7 @@ const Login = () => {
               <div className="row g-0">
                 <div className="col-md-6 col-lg-5 d-none d-md-block">
                   <img
-                    src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
+                    src="/logo_transparent.png"
                     alt="login form"
                     className="img-fluid"
                     style={{ borderRadius: '1rem 0 0 1rem' }}
@@ -51,8 +51,12 @@ const Login = () => {
                   <div className="card-body p-4 p-lg-5 text-black">
                     <form onSubmit={handleLogin}>
                       <div className="d-flex align-items-center mb-3 pb-1">
-                        <i className="fas fa-cubes fa-2x me-3" style={{ color: '#ff6219' }} />
-                        <span className="h1 fw-bold mb-0">Logo</span>
+                        <img
+                          src="/logo_transparent.png"
+                          alt="login form"
+                          className="img-fluid"
+                          style={{ borderRadius: '1rem 0 0 1rem' }}
+                        />
                       </div>
                       <h5 className="fw-normal mb-3 pb-3" style={{ letterSpacing: '1px' }}>
                         Sign into your account
