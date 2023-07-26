@@ -18,7 +18,6 @@ const MyReservations = () => {
     },
   ];
 
-  console.log('MyReservations.js');
   return (
     <div className="overflow-x-auto max-w-6xl mx-auto flex min-h-screen pt-20 justify-center">
       <table className="min-w-full divide-y-2 divide-gray-200 text-sm bg-slate-500/10 rounded-2xl h-fit">
