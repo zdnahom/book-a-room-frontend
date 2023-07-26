@@ -21,9 +21,8 @@ export const createRoom = createAsyncThunk('room/createRoom', async (payload, th
     },
     body: JSON.stringify(payload),
   });
-  const data = await response.json();
   if (response.ok) {
-    return data;
+    return {id: payload}
   }
   return thunkAPI.rejectWithValue(data);
 });
