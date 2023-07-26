@@ -12,6 +12,7 @@ const RoomDetail = () => {
   const { roomId } = useParams();
   console.log(roomId);
   const room = rooms.find((room) => room.id === parseInt(roomId));
+
   const navigate = useNavigate();
   useEffect(() => {
     dispatch(fetchRooms());

@@ -1,22 +1,39 @@
-import React, { useState } from 'react';
-// import 'mdb-react-ui-kit/dist/css/mdb.min.css';
-// import '@fortawesome/fontawesome-free/css/all.min.css';
+import { useState, useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { signIn } from '../redux/reducers/user';
 
 const Login = () => {
+  const user = useSelector((state) => state.user);
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const handleLogin = (e) => {
     e.preventDefault();
     // Perform login logic here
-    console.log('Login:', email, password);
-    // Reset form
-    setEmail('');
-    setPassword('');
+    dispatch(signIn({ email, password }));
   };
 
+  useEffect(() => {
+    if (user.user) {
+      navigate('/');
+    }
+  }, [user]);
+
+  if (user.loading) {
+    return (
+      <section className="vh-100 bg-white animate-pulse flex justify-center items-center w-full">
+        <div className="container h-[70vh] bg-slate-400 rounded-2xl" />
+      </section>
+    );
+  }
+
   return (
-    <section className="vh-100" style={{ backgroundColor: '#9A616D' }}>
+    <section className="vh-100">
       <div className="container py-5 h-100">
         <div className="row d-flex justify-content-center align-items-center h-100">
           <div className="col col-xl-10">
@@ -24,7 +41,7 @@ const Login = () => {
               <div className="row g-0">
                 <div className="col-md-6 col-lg-5 d-none d-md-block">
                   <img
-                    src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/img1.webp"
+                    src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
                     alt="login form"
                     className="img-fluid"
                     style={{ borderRadius: '1rem 0 0 1rem' }}
@@ -43,29 +60,26 @@ const Login = () => {
                       <div className="form-outline mb-4">
                         <input
                           type="email"
-                          id="form2Example17"
-                          className="form-control form-control-lg"
+                          className="text-black p-2 border border-slate-300/50 rounded-md w-full"
                           value={email}
+                          placeholder="Enter your email"
                           onChange={(e) => setEmail(e.target.value)}
                         />
-                        <label className="form-label" htmlFor="form2Example17">
-                          Email address
-                        </label>
                       </div>
                       <div className="form-outline mb-4">
                         <input
                           type="password"
-                          id="form2Example27"
-                          className="form-control form-control-lg"
+                          className="text-black p-2 border border-slate-300/50 rounded-md w-full"
                           value={password}
+                          placeholder="Enter your password"
                           onChange={(e) => setPassword(e.target.value)}
                         />
-                        <label className="form-label" htmlFor="form2Example27">
-                          Password
-                        </label>
                       </div>
                       <div className="pt-1 mb-4">
-                        <button className="btn btn-dark btn-lg btn-block" type="submit">
+                        <button
+                          className="hover:text-white font-thin text-center p-2 shadow-lg w-full rounded-md hover:bg-black"
+                          type="submit"
+                        >
                           Login
                         </button>
                       </div>
@@ -74,15 +88,14 @@ const Login = () => {
                       </a>
                       <p className="mb-5 pb-lg-2" style={{ color: '#393f81' }}>
                         Don&apos;t have an account?
-                        {' '}
-                        <a href="#!" style={{ color: '#393f81' }}>
+                        <Link to="/signup" className="mx-1">
                           Register here
-                        </a>
+                        </Link>
                       </p>
-                      <a href="#!" className="small text-muted">
+                      <a href="#!" className="small text-muted mx-1">
                         Terms of use.
                       </a>
-                      <a href="#!" className="small text-muted">
+                      <a href="#!" className="small text-muted mx-1">
                         Privacy policy
                       </a>
                     </form>

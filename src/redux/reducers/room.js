@@ -11,6 +11,16 @@ export const fetchRooms = createAsyncThunk('room/fetchRooms', async (payload, th
   return thunkAPI.rejectWithValue(data);
 });
 
+
+export const getSingleRoom = createAsyncThunk('room/getSingleRoom', async (roomId, thunkAPI) => {
+  try {
+    const res = await fetch(`https://book-a-room.onrender.com/api/v1/rooms/${roomId}`);
+    const data = await res.json();
+    return data;
+  } catch (error) {
+    return thunkAPI.rejectWithValue(error);
+  }
+
 // featchRooms is dispachec this way => dispatch(featchRooms())
 
 export const createRoom = createAsyncThunk('room/createRoom', async (payload, thunkAPI) => {
