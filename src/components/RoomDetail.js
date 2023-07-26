@@ -4,16 +4,20 @@ import { useEffect } from 'react';
 import ChangeHistorySharpIcon from '@mui/icons-material/ChangeHistorySharp';
 import ChevronRightRoundedIcon from '@mui/icons-material/ChevronRightRounded';
 import styles from '../styles/roomDetail.module.css';
-import { getSingleRoom } from '../redux/reducers/room';
+import { fetchRooms } from '../redux/reducers/room';
 
 const RoomDetail = () => {
-  const { singleRoom, loading } = useSelector((store) => store.rooms);
+  const { rooms, loading } = useSelector((store) => store.rooms);
   const dispatch = useDispatch();
   const { roomId } = useParams();
+  console.log(roomId);
+  const room = rooms.find((room) => room.id === parseInt(roomId));
+
   const navigate = useNavigate();
   useEffect(() => {
-    dispatch(getSingleRoom(roomId));
+    dispatch(fetchRooms());
   }, [dispatch, roomId]);
+
   return (
     <>
       {
@@ -22,7 +26,7 @@ const RoomDetail = () => {
           <div className={styles['detail-container']}>
             <div className={styles['left-detail']}>
               <div className={styles['image-container']}>
-                <img className={styles['room-image']} src={singleRoom.image} alt="room pic" />
+                <img className={styles['room-image']} src={room?.image} alt="room pic" />
               </div>
               <button
                 type="button"
@@ -34,7 +38,7 @@ const RoomDetail = () => {
               </button>
             </div>
             <div className={styles['right-detail']}>
-              <p className={styles['room-description']}>{singleRoom.description}</p>
+              <p className={styles['room-description']}>{room?.description}</p>
               <p className={styles['room-type']}>
                 ROOM TYPE
                 <span>Twin</span>
@@ -43,7 +47,7 @@ const RoomDetail = () => {
                 PRICE
                 <p>
                   $
-                  {singleRoom.night_cost}
+                  {room?.night_cost}
                   <span>/night</span>
                 </p>
               </p>
