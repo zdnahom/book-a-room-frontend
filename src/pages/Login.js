@@ -43,7 +43,7 @@ const Login = () => {
                   <img
                     src="/logo_transparent.png"
                     alt="login form"
-                    className="img-fluid"
+                    className="img-fluid hidden md:block"
                     style={{ borderRadius: '1rem 0 0 1rem' }}
                   />
                 </div>
@@ -51,12 +51,7 @@ const Login = () => {
                   <div className="card-body p-4 p-lg-5 text-black">
                     <form onSubmit={handleLogin}>
                       <div className="d-flex align-items-center mb-3 pb-1">
-                        <img
-                          src="/logo_transparent.png"
-                          alt="login form"
-                          className="img-fluid"
-                          style={{ borderRadius: '1rem 0 0 1rem' }}
-                        />
+                        <img src="/logo_transparent.png" alt="login form" className=" w-48 h-48 md:hidden" />
                       </div>
                       <h5 className="fw-normal mb-3 pb-3" style={{ letterSpacing: '1px' }}>
                         Sign into your account
