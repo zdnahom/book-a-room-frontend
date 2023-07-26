@@ -43,6 +43,7 @@
   <ul> 
     <li><a href="https://github.com/microverseinc/linters-config/tree/master/ror">Linters</a></li>
     <li><a href="https://react.dev/">React.js</a></li>   
+    <li><a href="https://redux.js.org/">Redux</a></li>
   </ul>
 </details>
 <details>
