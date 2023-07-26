@@ -40,12 +40,12 @@ export const deleteRoom = createAsyncThunk('room/deleteRoom', async (payload, th
   });
   const data = await response.json();
   if (response.ok) {
-    return { id: payload };
+    return { id: payload, ...data };
   }
   return thunkAPI.rejectWithValue(data);
 });
 
-// deleteRoom is dispached this way => dispatch(deleteRoom({id}))
+// deleteRoom is dispached this way => dispatch(deleteRoom(id))
 
 const roomSlice = createSlice({
   name: 'room',
