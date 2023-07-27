@@ -78,7 +78,6 @@ const roomSlice = createSlice({
     [createRoom.rejected]: (state, action) => ({ ...state, error: action.payload, loading: false }),
     [deleteRoom.pending]: (state) => ({ ...state, loading: true }),
     [deleteRoom.fulfilled]: (state, action) => {
-      console.log(action);
       state.rooms = state.rooms.filter((room) => room.id !== action.payload.id);
       state.loading = false;
     },

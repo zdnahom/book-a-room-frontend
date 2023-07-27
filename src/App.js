@@ -11,7 +11,7 @@ import SignUp from './pages/SignUp';
 import Login from './pages/Login';
 import Protected from './utils/protected';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <BrowserRouter>

@@ -13,7 +13,4 @@ test('renders navigation links', () => {
 
   // Assert that there is at least one link with "Rooms" text
   expect(roomsLinks.length).toBeGreaterThan(0);
-
-  // Add other assertions as needed for the other links
-  // ...
 });
