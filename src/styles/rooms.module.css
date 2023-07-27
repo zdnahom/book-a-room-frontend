@@ -1,0 +1,66 @@
+
+.rooms-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding-top: 8%;
+  padding-left: 4%;
+  padding-right: 4%;
+}
+
+.rooms-header {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.select-room-text {
+  color: gray;
+}
+
+.rooms {
+  width: 100%;
+  display: flex;
+}
+
+.my-carousel {
+  width: 94%;
+  padding: 30px;
+}
+
+.custom-link {
+  text-decoration: none;
+}
+
+.room {
+  background-color: white;
+  padding: 2%;
+  color: black;
+}
+
+.room-img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.room-description {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.room-price {
+  text-align: center;
+}
+
+.room-price span {
+  color: gray;
+}
+
+@media screen and (min-width: 768px) {
+  .rooms-container {
+    width: 75%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

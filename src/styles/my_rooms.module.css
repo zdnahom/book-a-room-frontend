@@ -1,0 +1,105 @@
+
+.rooms-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding-top: 8%;
+  padding-left: 4%;
+  padding-right: 4%;
+}
+
+.rooms-header {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.rooms {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.custom-link {
+  text-decoration: none;
+}
+
+.room {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 2%;
+  color: black;
+}
+
+.room-img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.room-description {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.room-price {
+  text-align: center;
+}
+
+.room-price span {
+  color: gray;
+}
+
+.button-container {
+  display: flex;
+  align-self: center;
+  align-items: center;
+  height: 50px;
+  text-decoration: none;
+  border: none;
+  background-color: inherit;
+}
+
+.button {
+  background-color: red;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  color: white;
+  border: none;
+}
+
+.left-round,
+.right-round {
+  background-color: red;
+  width: 50px;
+  height: 50px;
+}
+
+.left-round {
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+
+.right-round {
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+@media screen and (min-width: 768px) {
+  .rooms-container {
+    width: 75%;
+    padding-left: 0;
+    padding-right: 0;
+    overflow: auto;
+  }
+
+  .rooms {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
