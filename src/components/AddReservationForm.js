@@ -6,7 +6,6 @@ import { createReservation } from '../redux/reducers/reservation';
 const AddReservationForm = () => {
   const { rooms } = useSelector((store) => store.room);
   const { user } = useSelector((store) => store.user);
-  // const user = { id: 1 };
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [selectedRoom, setSelectedRoom] = useState(null);

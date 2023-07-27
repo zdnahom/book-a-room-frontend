@@ -6,8 +6,6 @@ import styles from '../styles/add_room_form.module.css';
 
 const AddRoomForm = () => {
   const { user } = useSelector((store) => store.user);
-  // const user = { id: 1 };
-
   const [roomData, setRoomData] = useState({
     description: '',
     num: '',
