@@ -6,8 +6,6 @@ import styles from '../styles/add_room_form.module.css';
 
 const AddRoomForm = () => {
   const { user } = useSelector((store) => store.user);
-  // const user = { id: 1 };
-
   const [roomData, setRoomData] = useState({
     description: '',
     num: '',
@@ -113,7 +111,7 @@ const AddRoomForm = () => {
         <button type="submit" className={styles['button-container']}>
           <span className={styles['left-round']} />
           <div className />
-          <div className={styles.button}>BOOK</div>
+          <div className={styles.button}>ADD</div>
           <span className={styles['right-round']} />
         </button>
       </form>

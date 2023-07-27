@@ -23,7 +23,6 @@ const SignUp = () => {
 
   useEffect(() => {
     if (user.user) {
-      console.log('redirecting');
       navigate('/');
     }
   }, [user]);

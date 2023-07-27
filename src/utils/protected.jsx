@@ -8,7 +8,7 @@ const Protected = ({ children }) => {
   if (user.user) {
     return children;
   }
-  return <Navigate to="/login" />;
+  return <Navigate to="/login" />; // can use useNavigate() hook as well
 };
 
 export default Protected;

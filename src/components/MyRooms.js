@@ -38,14 +38,11 @@ const MyRooms = () => {
                 </p>
               </Link>
               <button
+                className="bg-lime-500 text-white px-2 py-1 rounded"
                 type="button"
-                className={styles['button-container']}
                 onClick={() => handleDelete(room.id)}
               >
-                <span className={styles['left-round']} />
-                <div className />
-                <div className={styles.button}>REMOVE</div>
-                <span className={styles['right-round']} />
+                Delete
               </button>
             </li>
           ))}

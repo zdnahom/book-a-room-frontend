@@ -4,6 +4,7 @@
 
 - [📗 Table of Contents](#-table-of-contents)
 - [📖 Book-a-room App ](#-book-a-room-app-)
+  - [Live Demo](#live-demo)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -29,6 +30,10 @@
 >
 > This is the backend => [API](https://github.com/Mov305/book_a_room_backend.git)
 
+### Live Demo
+
+[Live Demo Link](https://book-my-room-2igi.onrender.com)
+
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
@@ -38,6 +43,7 @@
   <ul> 
     <li><a href="https://github.com/microverseinc/linters-config/tree/master/ror">Linters</a></li>
     <li><a href="https://react.dev/">React.js</a></li>   
+    <li><a href="https://redux.js.org/">Redux</a></li>
   </ul>
 </details>
 <details>
@@ -180,7 +186,5 @@ We would like to thank [Murat Korkmaz](https://www.behance.net/muratk) for the a
 ## 📝 License <a name="license"></a>
 
 This project is [MIT](./LICENSE) licensed.
-
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

@@ -106,14 +106,10 @@ function Carousel({ rooms }) {
         {rooms.map((room) => (
           <Link key={room.id} to={`/rooms/${room.id}`} className={styles['custom-link']}>
             <li className={styles.room}>
-              <img
-                className={styles['room-img']}
-                src={room.image}
-                alt="room pic"
-              />
+              <img className={styles['room-img']} src={room.image} alt="room pic" />
               <p className={styles['room-description']}>{room.description}</p>
               <p className={styles['room-price']}>
-                $
+                <span>$</span>
                 {room.night_cost}
                 <span>/night</span>
               </p>
