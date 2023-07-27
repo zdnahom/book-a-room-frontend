@@ -15,6 +15,7 @@
     - [Usage](#usage)
     - [Run tests](#run-tests)
   - [👥 Authors ](#-authors-)
+  - [📋 Kanban Board 📋](#-kanban-board-)
   - [🔭 Future Features ](#-future-features-)
   - [🤝 Contributing ](#-contributing-)
   - [⭐️ Show your support ](#️-show-your-support-)
@@ -40,9 +41,9 @@
 
 <details>
   <summary>Client</summary>
-  <ul> 
+  <ul>
     <li><a href="https://github.com/microverseinc/linters-config/tree/master/ror">Linters</a></li>
-    <li><a href="https://react.dev/">React.js</a></li>   
+    <li><a href="https://react.dev/">React.js</a></li>
     <li><a href="https://redux.js.org/">Redux</a></li>
   </ul>
 </details>
@@ -104,6 +105,8 @@ To run the project, execute the following command:
 
 - Not available for now
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 <!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
@@ -125,6 +128,19 @@ To run the project, execute the following command:
 - GitHub: [@atok624](https://github.com/atok624)
 - Twitter: [@atok624](https://twitter.com/mysticalamissah)
 - LinkedIn: [@atok624](https://linkedin.com/in/nicholas-amissah-153b09154)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 📋 Kanban Board 📋
+
+```There are 3 contributors for this project:```
+
+-  ### [Abdelrhman Samy Saad](https://github.com/Mov305)
+-  ### [Nicholas Amissah](https://github.com/atok624)
+-  ### [Nahom Zerihun Demissie](https://github.com/zdnahom)
+
+-  ### Here is the link to the final view Kanban board, showing the various tasks in this project [Final Kanban board](https://github.com/users/Mov305/projects/5)
+- ### Here is the link to the initial state of the Kanban board [Initial kanban board](https://user-images.githubusercontent.com/84607674/253231467-464632a5-e305-43f5-93be-7c737e54b422.PNG)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
